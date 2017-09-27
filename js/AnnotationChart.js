@@ -29,7 +29,7 @@ function drawChart() {
                             79463, 'Gallantors', 'Omniscience achieved']
   ]);
 
-  var chart = new google.visualization.AnnotationChart(document.getElementById('chart_Annotation'));
+  var chart = new google.visualization.AnnotationChart(document.getElementById('AnnotationChart'));
 
   var options = {
     displayAnnotations: true
