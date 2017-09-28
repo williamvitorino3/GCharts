@@ -3,64 +3,43 @@
     <meta charset="utf-8">
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!--Scripts dos gráficos.
-    <script type="text/javascript" src="js/TableChart.js"></script>
-    <script type="text/javascript" src="js/BarChart.js"></script>
-    <script type="text/javascript" src="js/AreaChart.js"></script>
-    <script type="text/javascript" src="js/BubbleChart.js"></script>
-    <script type="text/javascript" src="js/CalendarChart.js"></script>
-    <script type="text/javascript" src="js/ColumnChart.js"></script>
-    <script type="text/javascript" src="js/CandlestickChart.js"></script>
-    <script type="text/javascript" src="js/ComboChart.js"></script>
-    <script type="text/javascript" src="js/DonutChart.js"></script>
-    <script type="text/javascript" src="js/GanttChart.js"></script>
-    <script type="text/javascript" src="js/GaugeChart.js"></script>
-    <script type="text/javascript" src="js/GeoChart.js"></script>
-    <script type="text/javascript" src="js/HistogramChart.js"></script>-->
+    <!--Scripts dos gráficos. -->
     <script type="text/javascript" src="js/AnnotationChart.js"></script>
     <script type="text/javascript" src="js/mostrar.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <h1>Tela com todos os Google Charts</h1>
-    <select id="cars">
-      <option value="TableChart">TableChart</option>
-      <option value="BarChart">BarChart</option>
-      <option value="AnnotationChart">AnnotationChart</option>
-      <option value="AreaChart">AreaChart</option>
-      <option value="BubbleChart">BubbleChart</option>
-      <option value="Calendar_chart">CalendarChart</option>
-      <option value="ColumnChart">ColumnChart</option>
-      <option value="CandlestickChart">CandlestickChart</option>
-      <option value="ComboChart">ComboChart</option>
-      <option value="DonutChart">DonutChart</option>
-      <option value="GanttChart">GanttChart</option>
-      <option value="GaugeChart">GaugeChart</option>
-      <option value="GeoChart">GeoChart</option>
-      <option value="HistogramChart">HistogramChart</option>
-    </select>
-    <button type="button" name="button" onclick="getElemento()">+</button>
 
-    <h2>Annotation Chart</h2>
-    <div class="Chart" id="AnnotationChart"></div>
+    <!-- Trigger/Open The Modal -->
+    <button id="OpModalBt" onclick="showModal()" >+</button>
 
-    <!-- Checkbox
-    <h3>Selecione os gráficos à serem mostrados</h3>
-    <form action="">
-      <input type="checkbox" name="chart_Annotation" id="ckb_chart_Annotation">Annotation Chart<br>
-      <input type="checkbox" name="chart_Area" id="ckb_chart_Area">Area Chart<br>
-      <input type="checkbox" name="BubbleChart" id="ckb_BubbleChart">Bubble Chart<br>
-      <input type="checkbox" name="CalendarChart" id="ckb_CalendarChart">Calendar Chart<br>
-      <input type="checkbox" name="CandlestickChart" id="ckb_CandlestickChart">CandlestickChart Chart<br>
-      <input type="checkbox" name="ComboChart" id="ckb_ComboChart">Combo Chart<br>
-      <input type="checkbox" name="DonutChart" id="ckb_DonutChart">Donut Chart<br>
-      <input type="checkbox" name="GanttChart" id="ckb_GanttChart">Gantt Chart<br>
-      <input type="checkbox" name="GaugeChart" id="ckb_GaugeChart">Gauge Chart<br>
-      <input type="checkbox" name="GeoChart" id="ckb_GeoChart">Geo Chart<br>
-      <input type="checkbox" name="HistogramChart" id="ckb_HistogramChart">Histogram Chart<br>
-    </form>
-    -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="hiddeModal()">&times;</span>
+        <select id="cars">
+        <option value="TableChart">TableChart</option>
+        <option value="BarChart">BarChart</option>
+        <option value="AnnotationChart">AnnotationChart</option>
+        <option value="AreaChart">AreaChart</option>
+        <option value="BubbleChart">BubbleChart</option>
+        <option value="Calendar_chart">CalendarChart</option>
+        <option value="ColumnChart">ColumnChart</option>
+        <option value="CandlestickChart">CandlestickChart</option>
+        <option value="ComboChart">ComboChart</option>
+        <option value="DonutChart">DonutChart</option>
+        <option value="GanttChart">GanttChart</option>
+        <option value="GaugeChart">GaugeChart</option>
+        <option value="GeoChart">GeoChart</option>
+        <option value="HistogramChart">HistogramChart</option>
+        </select>
+        <button type="button" id="addChart" onclick="getElemento()">Adicionar</button>
+      </div>
+    </div>
+
     <!-- Gráficos
     <h2>Graficos</h2>
     <div >
@@ -103,5 +82,6 @@
         ver();
       </script>-!->
     </div>-->
+    <script type="text/javascript" src="js/modal.js"></script>
   </body>
 </html>
