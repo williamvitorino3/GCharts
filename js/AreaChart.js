@@ -5,7 +5,7 @@ google.charts.load('current');
 google.charts.setOnLoadCallback(drawChart);
 
 // draws it.
-function drawChart() {
+function drawAreaChart(element) {
   var data = google.visualization.arrayToDataTable([
     ['Year', 'Sales', 'Expenses'],
     ['2013',  1000,      400],
@@ -14,7 +14,7 @@ function drawChart() {
     ['2016',  1030,      540]
   ]);
 
-  var chart = new google.visualization.AreaChart(document.getElementById('chart_Area'));
+  var chart = new google.visualization.AreaChart(element);
 
   var options = {
     title: 'Company Performance',
