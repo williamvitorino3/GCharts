@@ -13,19 +13,20 @@ function getTypeChart() {
     }
 }
 
-function getelemento() {
-    var elements = document.getElementsByTagName('OPTION');
+function getElemento() {
+    var elements = document.getElementsByClassName('chart');
     for (var i = 0; i < elements.length; i++) {
-        if (elements[i].selected) {
-            //document.getElementByClass("Chart").id = elements[i].value;
-            return elements[i].value;
+        if (elements[i].id == "chart_void") {
+            elements[i].id += "_"+i;
+            return elements[i].id;
         }
+        console.log(elements[i].id);
     }
 }
 
 function setChart(idElemento) {
     google.charts.setOnLoadCallback(desenhaGrafico);
- 
+    
     function desenhaGrafico() {
 
         let graficos = {
@@ -233,7 +234,7 @@ function setChart(idElemento) {
                 }
             },
             "DonutChart": {
-                instancia: google.visualization.DonutChart,
+                instancia: google.visualization.PieChart,
                 data: google.visualization.arrayToDataTable([
                     ['Task', 'Hours per Day'],
                     ['Work', 11],
@@ -393,7 +394,7 @@ function setChart(idElemento) {
 
         let chart = graficos[getTypeChart()];
 
-        new chart.instancia(document.getElementById(idElemento))
+        new chart.instancia(document.getElementById(getElemento()))
             .draw(chart.data, chart.options);
     }
     

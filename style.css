@@ -1,5 +1,5 @@
 .chart {
-    display: none; /* none remove o componente */
+    display: block; /* none remove o componente */
 }
 
 /* The Modal (background) */
@@ -38,4 +38,9 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+div.container {
+    height: 100%;
+    background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%);
 }
