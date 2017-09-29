@@ -38,6 +38,5 @@ function getChart(chart, element) {
     "GeoChart": google.visualization.GeoChart,
     "HistogramChart": google.visualization.HistogramChart,
   }
-  console.log(charts[chart]);
   return new charts[chart](element);
 }

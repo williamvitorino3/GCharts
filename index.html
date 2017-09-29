@@ -5,6 +5,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!--Scripts dos gráficos. -->
     <script type="text/javascript" src="js/mostrar.js"></script>
+    <script type="text/javascript" src="js/chartsData.js"></script>
     <script type="text/javascript" src="js/charts.js"></script>
     <link rel="stylesheet" href="style.css">
     <!-- BootStrap -->
@@ -29,73 +30,41 @@
 
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close" onclick="hiddeModal()">&times;</span>
-        <select id="cars">
-        <option value="TableChart">TableChart</option>
-        <option value="BarChart">BarChart</option>
-        <option value="AnnotationChart">AnnotationChart</option>
-        <option value="AreaChart">AreaChart</option>
-        <option value="BubbleChart">BubbleChart</option>
-        <option value="CalendarChart">CalendarChart</option>
-        <option value="ColumnChart">ColumnChart</option>
-        <option value="CandlestickChart">CandlestickChart</option>
-        <option value="ComboChart">ComboChart</option>
-        <option value="DonutChart">DonutChart</option>
-        <option value="GanttChart">GanttChart</option>
-        <option value="GaugeChart">GaugeChart</option>
-        <option value="GeoChart">GeoChart</option>
-        <option value="HistogramChart">HistogramChart</option>
+        <!--
+      -->
+        
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Header</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <select id="cars">
+          <option value="TableChart">TableChart</option>
+          <option value="BarChart">BarChart</option>
+          <option value="AnnotationChart">AnnotationChart</option>
+          <option value="AreaChart">AreaChart</option>
+          <option value="BubbleChart">BubbleChart</option>
+          <option value="CalendarChart">CalendarChart</option>
+          <option value="ColumnChart">ColumnChart</option>
+          <option value="CandlestickChart">CandlestickChart</option>
+          <option value="ComboChart">ComboChart</option>
+          <option value="DonutChart">DonutChart</option>
+          <option value="GanttChart">GanttChart</option>
+          <option value="GaugeChart">GaugeChart</option>
+          <option value="GeoChart">GeoChart</option>
+          <option value="HistogramChart">HistogramChart</option>
         </select>
-        <button type="button"
-                id="addChart"
-                onclick="console.log(getElemento())"
-                class="btn btn-secondary btn-sm"
-                >Adicionar</button>
+      </div>
+        <div class="modal-footer">
+          <button type="button"
+          id="addChart"
+          onclick="console.log(getElemento())"
+          >Adicionar</button>
+        </div>
       </div>
     </div>
 
-    <!-- Gráficos
-    <h2>Graficos</h2>
-    <div >
-      <div id="chart_Table"></div>
-      <br/><hr/><br/>
-      <h2>Annotation Chart</h2>
-      <div id="chart_Annotation"></div>
-      <br/><hr/><br/>
-      <h2>Area Chart</h2>
-      <div id="chart_Area"></div>
-      <br/><hr/><br/>
-      <h2>Bubble Chart</h2>
-      <div id="BubbleChart"></div>
-      <br/><hr/><br/>
-      <h2>Calendar Chart</h2>
-      <div id="CalendarChart"></div>
-      <br/><hr/><br/>
-      <h2>CandlestickChart Chart</h2>
-      <div id="CandlestickChart"></div>
-      <br/><hr/><br/>
-      <h2>Combo Chart</h2>
-      <div id="ComboChart"></div>
-      <br/><hr/><br/>
-      <h2>Donut Chart</h2>
-      <div id="DonutChart"></div>
-      <br/><hr/><br/>
-      <h2>Gantt Chart</h2>
-      <div id="GanttChart"></div>
-      <br/><hr/><br/>
-      <h2>Gauge Chart</h2>
-      <div id="GaugeChart"></div>
-      <br/><hr/><br/>
-      <h2>Geo Chart</h2>
-      <div id="GeoChart"></div>
-      <br/><hr/><br/>
-      <h2>Histogram Chart</h2>
-      <div id="HistogramChart"></div>
-      <br/><hr/><br/>
-      <!--<script type="text/javascript">
-        ver();
-      </script>-!->
-    </div>-->
+
     <script type="text/javascript" src="js/modal.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
