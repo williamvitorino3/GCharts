@@ -41,12 +41,7 @@ function drawChartAnnotationChart(element) {
         displayAnnotations: true
     };
 
-    let objDataAnnotationChart = {
-        "data": getDataAnnotationChart(),
-        "options": {
-            displayAnnotations: true
-        }
-    }
+    let obj = graficos["AnnotationChart"];
 
-    chart.draw(objDataAnnotationChart.data, objDataAnnotationChart.options);
+    chart.draw(obj.data, obj.options);
 };
