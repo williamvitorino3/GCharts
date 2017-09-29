@@ -3,15 +3,12 @@
     <meta charset="utf-8">
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- Google Chart Import -->
-    <script type="text/javascript">
-      google.charts.load('current', { packages: ['corechart'] });
-    </script>
-    
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--
+    <script type="text/javascript" src="http://www.google.com/uds/modules/gviz/gviz-api.js"></script>
+    -->
     <!--Scripts dos gráficos. -->
-    <script type="text/javascript" src="js/mostrar.js"></script>
-    <script type="text/javascript" src="js/charts.js"></script>
-    <script type="text/javascript" src="js/chartsData.js"></script>
+    <script type="text/javascript" src="js/teste.js"></script>
     <link rel="stylesheet" href="style.css">
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -20,10 +17,15 @@
 
   <body>
     <div id="charts" class="container">
-      <button id="OpModalBt" onclick="showModal()" class="btn btn-primary btn-lg" >+</button>
-      <div id="chart1"></div>
-      <div id="chart2"></div>
-      <div id="chart3"></div>
+      <div id="chart1">
+        <button id="OpModalBt" class="btn btn-primary btn-lg" >+</button>
+      </div>
+      <div id="chart2">
+        <button id="OpModalBt" class="btn btn-primary btn-lg" >+</button>
+      </div>
+      <div id="chart3">
+        <button id="OpModalBt" class="btn btn-primary btn-lg" >+</button>
+      </div>
     </div>
 
     <!-- The Modal -->
@@ -40,7 +42,7 @@
         </div>
         <div class="modal-body">
           <select id="cars">
-          <option value="TableChart">TableChart</option>
+          <option value="Table">Table</option>
           <option value="BarChart">BarChart</option>
           <option value="AnnotationChart">AnnotationChart</option>
           <option value="AreaChart">AreaChart</option>
@@ -59,7 +61,7 @@
         <div class="modal-footer">
           <button type="button"
           id="addChart"
-          onclick="console.log(getElemento())"
+          onclick="setChart('chart1')"
           >Adicionar</button>
         </div>
       </div>
