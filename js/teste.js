@@ -24,7 +24,7 @@ function getElemento() {
     }
 }
 
-function setChart(idElemento) {
+function setChart() {
     google.charts.setOnLoadCallback(desenhaGrafico);
     
     function desenhaGrafico() {

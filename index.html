@@ -1,5 +1,6 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -10,68 +11,67 @@
     <!--Scripts dos gráficos. -->
     <script type="text/javascript" src="js/teste.js"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- BootStrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-      crossorigin="anonymous">
-  </head>
 
-  <body>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Dashboard Setup</h1>
+
     <div id="charts" class="container">
-      <button id="OpModalBt" class="btn btn-primary btn-lg" >+</button>
-      <br/>
-      <div class="chart op" id="chart_void"></div>
-      <div class="chart op" id="chart_void"></div>
-      <div class="chart op" id="chart_void"></div>
-    </div>
+        <!-- <button id="OpModalBt" class="btn btn-primary btn-lg">+</button> -->
+        <br/>
+        <div class="chart op" id="chart_void">
+            <span class="openModal">+ Add a chart </span>
+        </div>
+        <div class="chart op" id="chart_void">
+            <span class="openModal">+ Add a chart </span></div>
+        <div class="chart op" id="chart_void">
+            <span class="openModal">+ Add a chart </span></div>
+        </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <!--
-      -->
-        
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Header</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add a chart</h4>
+<button type="button" class="close" data-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <select id="cars">
+                    <option value="Table">Table</option>
+                    <option value="BarChart">BarChart</option>
+                    <option value="AnnotationChart">AnnotationChart</option>
+                    <option value="AreaChart">AreaChart</option>
+                    <option value="BubbleChart">BubbleChart</option>
+                    <option value="CalendarChart">CalendarChart</option>
+                    <option value="ColumnChart">ColumnChart</option>
+                    <option value="CandlestickChart">CandlestickChart</option>
+                    <option value="ComboChart">ComboChart</option>
+                    <option value="DonutChart">DonutChart</option>
+                    <option value="GanttChart">GanttChart</option>
+                    <option value="GaugeChart">GaugeChart</option>
+                    <option value="GeoChart">GeoChart</option>
+                    <option value="HistogramChart">HistogramChart</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="addChart" onclick="setChart()">Adicionar</button>
+                <button type="button" id="cancelChart" onclick="closeModal()">Cancelar</button>
+            </div>
         </div>
-        <div class="modal-body">
-          <select id="cars">
-          <option value="Table">Table</option>
-          <option value="BarChart">BarChart</option>
-          <option value="AnnotationChart">AnnotationChart</option>
-          <option value="AreaChart">AreaChart</option>
-          <option value="BubbleChart">BubbleChart</option>
-          <option value="CalendarChart">CalendarChart</option>
-          <option value="ColumnChart">ColumnChart</option>
-          <option value="CandlestickChart">CandlestickChart</option>
-          <option value="ComboChart">ComboChart</option>
-          <option value="DonutChart">DonutChart</option>
-          <option value="GanttChart">GanttChart</option>
-          <option value="GaugeChart">GaugeChart</option>
-          <option value="GeoChart">GeoChart</option>
-          <option value="HistogramChart">HistogramChart</option>
-        </select>
-      </div>
-        <div class="modal-footer">
-          <button type="button"
-          id="addChart"
-          onclick="setChart('chart1')"
-          >Adicionar</button>
-        </div>
-      </div>
     </div>
 
 
     <script type="text/javascript" src="js/modal.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-      crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
 </html>

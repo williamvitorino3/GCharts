@@ -42,5 +42,19 @@
 
 div.container {
     height: 100%;
-    background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%);
+    width: 100%;
+    /* background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%); */
+}
+
+div.op {
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+    font-size: 3vw;
+    border-width: thin;
+    border-style: dashed;
+    border-color: #CFCBCB;
 }
