@@ -80,6 +80,7 @@ h2 {
     text-align: left;
 }
 
-select.dropdown {
-    width: 30%;
+.add{
+    background-color: #109C17;
+    color: #109C17;
 }

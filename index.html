@@ -38,9 +38,11 @@
             <span class="openModal">+ Add a chart </span>
         </div>
         <div class="chart op" id="chart_void">
-            <span class="openModal">+ Add a chart </span></div>
+            <span class="openModal">+ Add a chart </span>
+        </div>
         <div class="chart op" id="chart_void">
-            <span class="openModal">+ Add a chart </span></div>
+            <span class="openModal">+ Add a chart </span
+        ></div>
     </div>
 
     <!-- The Modal -->
@@ -51,23 +53,81 @@
             <h2 class="title">Add a chart</h2>
         </div>
         <div class="content">
-            <h3>Graph Type</h3>
-            <select id="cars" class="ui selection dropdown">
-                <option value="Table">Table</option>
-                <option value="BarChart">BarChart</option>
-                <option value="AnnotationChart">AnnotationChart</option>
-                <option value="AreaChart">AreaChart</option>
-                <option value="BubbleChart">BubbleChart</option>
-                <option value="CalendarChart">CalendarChart</option>
-                <option value="ColumnChart">ColumnChart</option>
-                <option value="CandlestickChart">CandlestickChart</option>
-                <option value="ComboChart">ComboChart</option>
-                <option value="DonutChart">DonutChart</option>
-                <option value="GanttChart">GanttChart</option>
-                <option value="GaugeChart">GaugeChart</option>
-                <option value="GeoChart">GeoChart</option>
-                <option value="HistogramChart">HistogramChart</option>
-            </select>
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Nome:
+                    <br>
+                </div>
+                <input type="text" placeholder="Nome">
+            </div>
+            <div class="ui inverted divider"></div>
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Description:
+                </div>
+                <textarea rows="3" cols="70"></textarea>
+            </div>
+            <div class="ui inverted divider"></div>
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Period:
+                </div>
+                <input type="date">
+            </div>
+
+            <div class="ui inverted divider"></div>
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Graph Type
+                </div>
+                <select id="cars" class="ui selection dropdown">
+                    <option value="Table">Table</option>
+                    <option value="BarChart">BarChart</option>
+                    <option value="AnnotationChart">AnnotationChart</option>
+                    <option value="AreaChart">AreaChart</option>
+                    <option value="BubbleChart">BubbleChart</option>
+                    <option value="CalendarChart">CalendarChart</option>
+                    <option value="ColumnChart">ColumnChart</option>
+                    <option value="CandlestickChart">CandlestickChart</option>
+                    <option value="ComboChart">ComboChart</option>
+                    <option value="DonutChart">DonutChart</option>
+                    <option value="GanttChart">GanttChart</option>
+                    <option value="GaugeChart">GaugeChart</option>
+                    <option value="GeoChart">GeoChart</option>
+                    <option value="HistogramChart">HistogramChart</option>
+                </select>
+            </div>
+            <div class="ui inverted divider"></div>
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Plan:
+                </div>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- Planos -->
+                </select>
+            </div>
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Plan Item:
+                </div>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- Itens do Plano selecionado -->
+                </select>
+            </div>
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    KPI:
+                </div>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- KPIs -->
+                </select>
+            </div>
+
         </div>
         <div class="actions">
             <div class="ui buttons">

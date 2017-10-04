@@ -1,4 +1,7 @@
-google.charts.load('current', { packages: ['corechart', 'controls', 'table', 'annotationchart', 'geochart'], 'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});
+google.charts.load('current', {
+    packages: ['corechart', 'controls', 'table', 'annotationchart', 'geochart', 'gantt', 'gauge'],
+    'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+});
 // Set a callback to run when the Google Visualization API is loaded.
 
 // google.charts.setOnLoadCallback(desenhaGrafico);
@@ -249,7 +252,7 @@ function setChart() {
                 }
             },
             "GanttChart": {
-                instancia: google.visualization.GanttChart,
+                instancia: google.visualization.Gantt,
                 data: new google.visualization.DataTable({
                     cols: [
                         { id: 'Task ID', label: 'Task ID', type: "string" },
@@ -288,12 +291,10 @@ function setChart() {
                 }
             },
             "GaugeChart": {
-                instancia: google.visualization.GaugeChart,
+                instancia: google.visualization.Gauge,
                 data: new google.visualization.arrayToDataTable([
                     ['Label', 'Value'],
                     ['Memory', 80],
-                    ['CPU', 55],
-                    ['Network', 68]
                 ]),
                 options: {
                     width: 400, height: 120,
@@ -354,7 +355,7 @@ function setChart() {
                 }
             },
             "HistogramChart": {
-                instancia: google.visualization.HistogramChart,
+                instancia: google.visualization.Histogram,
                 data: new google.visualization.arrayToDataTable([
                     ['Dinosaur', 'Length'],
                     ['Acrocanthosaurus (top-spined lizard)', 12.2],
