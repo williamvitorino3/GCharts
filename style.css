@@ -68,7 +68,7 @@ div.modal {
     background-color: rgba(237, 237, 237, 0.8);
 }
 
-div.modal-content {
+div.content {
     background-color: #E7E7E7;
 }
 /* 
@@ -78,4 +78,8 @@ div.modal-header {
 
 h2 {
     text-align: left;
+}
+
+select.dropdown {
+    width: 30%;
 }
