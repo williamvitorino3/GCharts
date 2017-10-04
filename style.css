@@ -58,3 +58,20 @@ div.op {
     border-style: dashed;
     border-color: #CFCBCB;
 }
+
+#addChart {
+    background-color: #0488BB;
+    color: #FFFFFF;
+}
+
+div.modal {
+    background-color: rgba(237, 237, 237, 0.8);
+}
+
+div.modal-content {
+    background-color: #E7E7E7;
+}
+/* 
+div.modal-header {
+    background-color : #FFFFFF;
+} */
