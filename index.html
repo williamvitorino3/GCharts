@@ -41,26 +41,39 @@
 <button type="button" class="close" data-dismiss="modal" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <select id="cars">
-                    <option value="Table">Table</option>
-                    <option value="BarChart">BarChart</option>
-                    <option value="AnnotationChart">AnnotationChart</option>
-                    <option value="AreaChart">AreaChart</option>
-                    <option value="BubbleChart">BubbleChart</option>
-                    <option value="CalendarChart">CalendarChart</option>
-                    <option value="ColumnChart">ColumnChart</option>
-                    <option value="CandlestickChart">CandlestickChart</option>
-                    <option value="ComboChart">ComboChart</option>
-                    <option value="DonutChart">DonutChart</option>
-                    <option value="GanttChart">GanttChart</option>
-                    <option value="GaugeChart">GaugeChart</option>
-                    <option value="GeoChart">GeoChart</option>
-                    <option value="HistogramChart">HistogramChart</option>
-                </select>
+                <div>
+                    <h6>Graph Type</h6>
+                    <select id="cars">
+                        <option value="Table">Table</option>
+                        <option value="BarChart">BarChart</option>
+                        <option value="AnnotationChart">AnnotationChart</option>
+                        <option value="AreaChart">AreaChart</option>
+                        <option value="BubbleChart">BubbleChart</option>
+                        <option value="CalendarChart">CalendarChart</option>
+                        <option value="ColumnChart">ColumnChart</option>
+                        <option value="CandlestickChart">CandlestickChart</option>
+                        <option value="ComboChart">ComboChart</option>
+                        <option value="DonutChart">DonutChart</option>
+                        <option value="GanttChart">GanttChart</option>
+                        <option value="GaugeChart">GaugeChart</option>
+                        <option value="GeoChart">GeoChart</option>
+                        <option value="HistogramChart">HistogramChart</option>
+                    </select>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="addChart" onclick="setChart()">Adicionar</button>
-                <button type="button" id="cancelChart" onclick="closeModal()">Cancelar</button>
+                <button
+                    type="button"
+                    class="btnModal"
+                    id="addChart"
+                    onclick="setChart()"
+                >Adicionar</button>
+                <button
+                    type="button"
+                    class="btnModal"
+                    id="cancelChart"
+                    onclick="closeModal()"
+                >Cancelar</button>
             </div>
         </div>
     </div>
