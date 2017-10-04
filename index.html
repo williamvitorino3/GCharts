@@ -1,7 +1,13 @@
 <html>
-
 <head>
     <meta charset="utf-8">
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -17,10 +23,13 @@
 </head>
 
 <body>
-    <h1>Dashboard Setup</h1>
-
     <div id="charts" class="container">
-        <!-- <button id="OpModalBt" class="btn btn-primary btn-lg">+</button> -->
+        <h2>Dashboard Setup</h2>
+        <span>
+            vendas
+            <button id="OpModalBt" class="openModal">+</button>
+        </span>
+        <br/>
         <br/>
         <div class="chart op" id="chart_void">
             <span class="openModal">+ Add a chart </span>
@@ -29,7 +38,7 @@
             <span class="openModal">+ Add a chart </span></div>
         <div class="chart op" id="chart_void">
             <span class="openModal">+ Add a chart </span></div>
-        </div>
+    </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -38,12 +47,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Add a chart</h4>
-                <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    onclick="closeModal()"
-                >&times;</button>
+                <button type="button" class="close" data-dismiss="modal" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
                 <div>
@@ -67,18 +71,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button
-                    type="button"
-                    class="btnModal"
-                    id="addChart"
-                    onclick="setChart()"
-                >Adicionar</button>
-                <button
-                    type="button"
-                    class="btnModal"
-                    id="cancelChart"
-                    onclick="closeModal()"
-                >Cancelar</button>
+                <button type="button" class="btnModal" id="addChart" onclick="setChart()">Adicionar</button>
+                <button type="button" class="btnModal" id="cancelChart" onclick="closeModal()">Cancelar</button>
             </div>
         </div>
     </div>
@@ -87,9 +81,9 @@
     <script type="text/javascript" src="js/modal.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
