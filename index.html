@@ -23,23 +23,50 @@
     </head>
     <body>
         <!--  -->
-        <h1 class="ui header">Dashboard Setup</h1>
-        <br>
-        <nav id="tela">
-            <nav class="ui labeled input">
-                <nav class="ui label">
-                        <h3>Nome:</h3>
+        <nav class="ui container">
+            <h1 class="ui header">Dashboard Setup</h1>
+            <br>
+            <nav id="tela">
+                <!-- Diminuir o tamanho disso. -->
+                <h3 class="ui header">Nome:</h3>
+                <nav class="ui fluid  input focus">
+                        <input type="text" placeholder="Nome">
                 </nav>
-                <input type="text" placeholder="Nome">
-            </nav>
-            <br/>
-            <nav class="ui labeled input">
-                <nav class="">
-                    <h3>
-                        Select a layout:
-                    </h3>
+                <nav class="ui section divider"></nav>
+                
+                <h3 class="ui header">Select a layout:</h3>
+                <nav class="ui fluid  input focus">
+                    <input type="text" placeholder="Layout">
                 </nav>
-                <!-- <input type="text" placeholder="Nome"> -->
+                <nav class="ui section divider"></nav>
+
+                <nav id="Teams" class="ops">
+                    <nav class="Team">
+                        <h3 class="ui header">
+                            Team:
+                        </h3>
+                        <nav>
+                            <select id="cars" class="ui selection dropdown">
+                            </select>
+                            <br>
+                            <!-- TODO: Perguntar qual componente botar aqui. -->
+                            <!-- Só de exemplo. -->
+                            <textarea rows="5" cols="50">Times</textarea>
+                        </nav>
+                    </nav>
+                    <nav class="Team Member">
+                        <h3 class="ui header">
+                            Team Menbres:
+                        </h3>
+                        <nav>
+                            <select id="cars" class="ui selection dropdown">
+                            </select>
+                            <br>
+                            <textarea rows="5" cols="50">Membros dos times</textarea>
+                        </nav>
+                    </nav>
+                </nav>
+
             </nav>
         </nav>
     </body>
