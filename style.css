@@ -40,23 +40,58 @@
     cursor: pointer;
 }
 
-div.container {
+nav.container {
     height: 100%;
     width: 100%;
     /* background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%); */
 }
 
-div.op {
+/* 
+#container {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #c30;
+    background: #ffe;
+    position: relative;
+    display: table;
+}
+
+#container p {
+    *position: absolute;
+    top: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#container span {
+    display: block;
+    *position: relative;
+    top: -50%;
+}
+
+ */
+
+#chart_void {
     width: 30%;
-    height: 30%;
-    display: inline-block;
+    /* height: 40%; */
+    float: left;
     background-color: #FFFFFF;
-    text-align: center;
-    padding: 5vw 0vw 5vw 0vw;
-    font-size: 3vw;
     border-width: thin;
     border-style: dashed;
     border-color: #CFCBCB;
+    text-align: center;
+    padding: 9% 0% 9% 0%;
+}
+
+nav.ops{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h3.header {
+    /* background-color: blue; */
 }
 
 #addChart {
@@ -64,23 +99,22 @@ div.op {
     color: #FFFFFF;
 }
 
-div.modal {
+nav.modal {
     background-color: rgba(237, 237, 237, 0.8);
 }
 
-div.content {
+nav.content {
     background-color: #E7E7E7;
 }
-/* 
-div.modal-header {
-    background-color : #FFFFFF;
-} */
 
-h2 {
+h2.title {
     text-align: left;
 }
 
-.add{
-    background-color: #109C17;
-    color: #109C17;
+#OpModalBt i{
+    background-color: #71B822;
+}
+
+i.add{
+    color: #FFFFFF;
 }

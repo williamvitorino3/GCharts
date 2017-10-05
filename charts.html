@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--
+    <script type="text/javascript" src="http://www.google.com/uds/modules/gviz/gviz-api.js"></script>
+    -->
+    <!--Scripts dos gráficos. -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- BootStrap -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <nav id="charts" class="container">
+        <h2 class="title">Dashboard Setup</h2>
+        <span>
+            <button id="OpModalBt" class="openModal ui basic right labeled icon button">
+                <i class="right add square icon"></i>
+                vendas
+            </button>
+        </span>
+        <br/>
+        <br/>
+        <nav class="ops">
+            <nav class="chart op" id="chart_void">
+                <span class="openModal">
+                    <h3 class="ui header">
+                        + Add a chart
+                    </h3>
+                </span>
+            </nav>
+            <nav class="chart op" id="chart_void">
+                <span class="openModal">
+                    <h3 class="ui header">
+                        + Add a chart
+                    </h3>
+                </span>
+            </nav>
+            <nav class="chart op" id="chart_void">
+                <span class="openModal">
+                    <h3 class="ui header">
+                        + Add a chart
+                    </h3>
+                </span
+            ></nav>        
+        </nav>
+    </nav>
+
+    <!-- The Modal -->
+    <nav id="myModal" class="ui small modal">
+        <!-- Modal content -->
+        <nav class="header">
+            <i class="close icon" onclick="closeModal()"></i>
+            <h2 class="title">Add a chart</h2>
+        </nav>
+        <nav class="content">
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Nome:
+                    <br>
+                </nav>
+                <input type="text" placeholder="Nome">
+            </nav>
+            <nav class="ui inverted navider"></nav>
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Description:
+                </nav>
+                <textarea rows="3" cols="70"></textarea>
+            </nav>
+            <nav class="ui inverted navider"></nav>
+
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Period:
+                </nav>
+                <input type="date">
+            </nav>
+
+            <nav class="ui inverted navider"></nav>
+
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Graph Type
+                </nav>
+                <select id="cars" class="ui selection dropdown">
+                    <option value="Table">Table</option>
+                    <option value="BarChart">BarChart</option>
+                    <option value="AnnotationChart">AnnotationChart</option>
+                    <option value="AreaChart">AreaChart</option>
+                    <option value="BubbleChart">BubbleChart</option>
+                    <option value="CalendarChart">CalendarChart</option>
+                    <option value="ColumnChart">ColumnChart</option>
+                    <option value="CandlestickChart">CandlestickChart</option>
+                    <option value="ComboChart">ComboChart</option>
+                    <option value="DonutChart">DonutChart</option>
+                    <option value="GanttChart">GanttChart</option>
+                    <option value="GaugeChart">GaugeChart</option>
+                    <option value="GeoChart">GeoChart</option>
+                    <option value="HistogramChart">HistogramChart</option>
+                </select>
+            </nav>
+            <nav class="ui inverted navider"></nav>
+
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Plan:
+                </nav>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- Planos -->
+                </select>
+            </nav>
+
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    Plan Item:
+                </nav>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- Itens do Plano selecionado -->
+                </select>
+            </nav>
+
+            <nav class="ui labeled input">
+                <nav class="ui label">
+                    KPI:
+                </nav>
+                <select id="pans" class="ui selection dropdown">
+                   <!-- KPIs -->
+                </select>
+            </nav>
+
+        </nav>
+        <nav class="actions">
+            <nav class="ui buttons">
+                <button type="ui button" class="btnModal ui positive button" id="addChart" onclick="setChart()">Adicionar</button>
+                <nav class="or"></nav>
+                <button type="ui button" class="btnModal ui button" id="cancelChart" onclick="closeModal()">Cancelar</button>
+            </nav>
+        </nav>
+    </nav>
+
+
+    <script type="text/javascript" src="js/modal.js"></script>
+</body>
+
+</html>
