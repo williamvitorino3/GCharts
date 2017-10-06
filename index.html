@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
+
         <!-- Semantic UI -->
         <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -45,14 +46,40 @@
                         <h3 class="ui header">
                             Team:
                         </h3>
-                        <nav>
-                            <select id="cars" class="ui selection dropdown">
-                            </select>
-                            <br>
-                            <!-- TODO: Perguntar qual componente botar aqui. -->
-                            <!-- Só de exemplo. -->
-                            <textarea rows="5" cols="50">Times</textarea>
-                        </nav>
+                        <!--  -->
+                        <div class="ui multiple dropdown">
+                            <input type="hidden" name="filters">
+                            <i class="filter icon"></i>
+                            <span class="text">Filtrar posts</span>
+                            <div class="menu">
+                                <div class="ui icon search input">
+                                    <i class="search icon"></i>
+                                    <input type="text" placeholder="Procurar tags...">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="header">
+                                    <i class="tags icon"></i> Etiquetas </div>
+                                <div class="scrolling menu">
+                                    <div class="item" data-value="important">
+                                        <div class="ui red empty circular label"></div>Importante </div>
+                                    <div class="item" data-value="announcement">
+                                        <div class="ui blue empty circular label"></div>Anúncio </div>
+                                    <div class="item" data-value="cannotfix">
+                                        <div class="ui black empty circular label"></div>Não pode corrigir </div>
+                                    <div class="item" data-value="news">
+                                        <div class="ui purple empty circular label"></div>Novidades </div>
+                                    <div class="item" data-value="enhancement">
+                                        <div class="ui orange empty circular label"></div>Melhoria </div>
+                                    <div class="item" data-value="off-topic">
+                                        <div class="ui yellow empty circular label"></div>Fora do assunto </div>
+                                    <div class="item" data-value="interesting">
+                                        <div class="ui pink empty circular label"></div>Interessado </div>
+                                    <div class="item" data-value="discussion">
+                                        <div class="ui green empty circular label"></div>Discussão </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
                     </nav>
                     <nav class="Team Member">
                         <h3 class="ui header">
