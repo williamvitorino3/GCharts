@@ -10,10 +10,16 @@ nav.input{
 .dropdown{
     width: 50%;
 }
+
+h1{
+    color: #166bb3;
+}
+
 textarea{
     width: 50%
 }
 
+/* Isso centraliza uma nav */
 /* nav.ops {
     display: flex;
     flex-direction: row;

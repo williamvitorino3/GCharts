@@ -1,100 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
 
-        <!-- Semantic UI -->
-        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-        <script src="semantic/dist/semantic.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
 
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
 
-        <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        
-        <!--Scripts dos gráficos. -->
-        <script type="text/javascript" src="js/main.js"></script>
-        <link rel="stylesheet" href="style.css">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-    </head>
-    <body>
-        <!--  -->
-        <nav class="ui container">
-            <h1 class="ui header">Dashboard Setup</h1>
-            <br>
-            <nav id="tela">
-                <!-- Diminuir o tamanho disso. -->
-                <h3 class="ui header">Nome:</h3>
-                <nav class="ui fluid  input focus">
-                        <input type="text" placeholder="Nome">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--  -->
+    <nav class="ui container">
+        <h1 class="ui header">Dashboard Setup</h1>
+        <br>
+        <nav id="tela">
+            <!-- Diminuir o tamanho disso. -->
+            <h3 class="ui header">Nome:</h3>
+            <nav class="ui fluid  input focus">
+                <input type="text" placeholder="Nome">
+            </nav>
+            <nav class="ui section divider"></nav>
+
+            <div class="ui segment">
+                <!-- Dimmer Generated Automatically No Need to Include !-->
+                <h3 class="ui header">
+                    Select a layout:
+                </h3>
+                <nav class="ui tiny images">
+                    <span class="img_svg">
+                        <!-- <img src="icons/3-col.svg"/> -->
+                        <svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                            version="1.1" overflow="visible" width="161.55pt" height="105.975pt" viewBox="0 0 161.55 105.975">
+                            <path
+                                class="ui image"
+                                d="M 0,-0.01 L 0,105.987 L 49.193,105.987 L 49.193,-0.01 L 0,-0.01 Z M 44.807,4.376 L 44.807,101.601 L 4.386,101.601 L 4.386,4.376 L 44.807,4.376 Z"
+                                fill-rule="evenodd"
+                                stroke="none" stroke-width="0.5"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none"
+                                stroke-miterlimit="79.8403193612775" />
+                            <path
+                                class="ui image"
+                                d="M 56.179,-0.01 L 56.179,105.987 L 105.371,105.987 L 105.371,-0.01 L 56.179,-0.01 Z M 100.985,4.376 L 100.985,101.601 L 60.565,101.601 L 60.565,4.376 L 100.985,4.376 Z"
+                                fill-rule="evenodd"
+                                stroke="none"
+                                stroke-width="0.5"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none"
+                                stroke-miterlimit="79.8403193612775" />
+                            <path
+                                class="ui image"
+                                d="M 112.357,-0.013 L 112.357,105.984 L 161.55,105.984 L 161.55,-0.013 L 112.357,-0.013 Z M 157.164,4.373 L 157.164,101.598 L 116.743,101.598 L 116.743,4.373 L 157.164,4.373 Z"
+                                fill-rule="evenodd"
+                                stroke="none"
+                                stroke-width="0.5"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none"
+                                stroke-miterlimit="79.8403193612775" />
+                        </svg>
+                    </span>
+                    <span class="img_svg">
+                        <!-- <img src="icons/2-col.svg"/>  -->
+                        <svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="161.55pt" height="105.975pt" viewBox="0 0 105.825 105.975">
+                            <path
+                                class="ui image"
+                                d="M 0.017,-0.011 L 0.017,105.986 L 49.209,105.986 L 49.209,-0.011 L 0.017,-0.011 Z M 44.823,4.375 L 44.823,101.6 L 4.403,101.6 L 4.403,4.375 L 44.823,4.375 Z M 56.616,-0.011 L 56.616,105.986 L 105.809,105.986 L 105.809,-0.011 L 56.616,-0.011 Z M 101.423,4.375 L 101.423,101.6 L 61.002,101.6 L 61.002,4.375 L 101.423,4.375 Z"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none" />
+                        </svg>
+                    </span>
+                    <span class="img_svg">
+                        <!-- <img src="icons/2col-1col.svg"/> -->
+                        <svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="161.55pt" height="105.975pt" viewBox="0 0 161.55 105.975">
+                            <path
+                                class="ui image"
+                                d="M 0.001,-0.01 L 0.001,105.987 L 105.369,105.987 L 105.369,-0.01 L 0.001,-0.01 Z M 100.983,4.376 L 100.983,101.601 L 4.387,101.601 L 4.387,4.376 L 100.983,4.376 Z M 112.358,-0.013 L 112.358,105.984 L 161.55,105.984 L 161.55,-0.013 L 112.358,-0.013 Z M 157.164,4.373 L 157.164,101.598 L 116.744,101.598 L 116.744,4.373 L 157.164,4.373 Z"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none" />
+                        </svg>
+                    </span>
+                    <span class="img_svg">
+                        <!--<img src="icons/1col-2col.svg"/>-->
+                        <svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                            version="1.1" overflow="visible" width="161.55pt" height="105.975pt" viewBox="0 0 161.55 105.975">
+                            <path
+                                class="ui image"
+                                d="M 56.182,-0.01 L 56.182,105.987 L 161.55,105.987 L 161.55,-0.01 L 56.182,-0.01 Z M 157.164,4.376 L 157.164,101.601 L 60.568,101.601 L 60.568,4.376 L 157.164,4.376 Z M 0,-0.013 L 0,105.984 L 49.193,105.984 L 49.193,-0.013 L 0,-0.013 Z M 44.807,4.373 L 44.807,101.598 L 4.386,101.598 L 4.386,4.373 L 44.807,4.373 Z"
+                                fill="#666666"
+                                marker-start="none"
+                                marker-end="none" />
+                        </svg>
+                    </span>
+                    <span class="img_svg">
+                        <!-- <img src="icons/full.svg"/> -->
+                        <svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="161.1pt" height="105.975pt" viewBox="0 0 161.1 105.975">                            
+                            <path
+                                class="ui image"
+                                d="M 0.012,-0.011 L 0.012,105.986 L 161.088,105.986 L 161.088,-0.011 L 0.012,-0.011 Z M 156.702,4.375 L 156.702,101.6 L 4.398,101.6 L 4.398,4.375 L 156.702,4.375 Z"
+                                stroke-width="0.5"
+                                stroke="none"
+                                fill="#666666"
+                                fill-rule="evenodd"
+                                marker-start="none"
+                                marker-end="none"
+                                stroke-miterlimit="79.8403193612775" />
+                        </svg>
+                    </span>
                 </nav>
-                <nav class="ui section divider"></nav>
-                
-                <h3 class="ui header">Select a layout:</h3>
-                <nav class="ui fluid  input focus">
-                    <input type="text" placeholder="Layout">
-                </nav>
-                <nav class="ui section divider"></nav>
+                <p>Whatever</p>
+            </div>
 
-                <nav id="Teams" class="ops">
-                    <nav class="Team">
-                        <h3 class="ui header">
-                            Team:
-                        </h3>
-                        <!--  -->
-                        <div class="ui multiple dropdown">
-                            <input type="hidden" name="filters">
-                            <i class="filter icon"></i>
-                            <span class="text">Filtrar posts</span>
-                            <div class="menu">
-                                <div class="ui icon search input">
-                                    <i class="search icon"></i>
-                                    <input type="text" placeholder="Procurar tags...">
-                                </div>
-                                <div class="divider"></div>
-                                <div class="header">
-                                    <i class="tags icon"></i> Etiquetas </div>
-                                <div class="scrolling menu">
-                                    <div class="item" data-value="important">
-                                        <div class="ui red empty circular label"></div>Importante </div>
-                                    <div class="item" data-value="announcement">
-                                        <div class="ui blue empty circular label"></div>Anúncio </div>
-                                    <div class="item" data-value="cannotfix">
-                                        <div class="ui black empty circular label"></div>Não pode corrigir </div>
-                                    <div class="item" data-value="news">
-                                        <div class="ui purple empty circular label"></div>Novidades </div>
-                                    <div class="item" data-value="enhancement">
-                                        <div class="ui orange empty circular label"></div>Melhoria </div>
-                                    <div class="item" data-value="off-topic">
-                                        <div class="ui yellow empty circular label"></div>Fora do assunto </div>
-                                    <div class="item" data-value="interesting">
-                                        <div class="ui pink empty circular label"></div>Interessado </div>
-                                    <div class="item" data-value="discussion">
-                                        <div class="ui green empty circular label"></div>Discussão </div>
-                                </div>
+            <nav class="ui section divider"></nav>
+
+            <nav id="Teams" class="ops">
+                <nav class="Team">
+                    <h3 class="ui header">
+                        Team:
+                    </h3>
+                    <!--  -->
+                    <div class="ui multiple dropdown">
+                        <input type="hidden" name="filters">
+                        <i class="filter icon"></i>
+                        <span class="text">Filtrar posts</span>
+                        <div class="menu">
+                            <div class="ui icon search input">
+                                <i class="search icon"></i>
+                                <input type="text" placeholder="Procurar tags...">
+                            </div>
+                            <div class="divider"></div>
+                            <div class="header">
+                                <i class="tags icon"></i> Etiquetas </div>
+                            <div class="scrolling menu">
+                                <div class="item" data-value="important">
+                                    <div class="ui red empty circular label"></div>Importante </div>
+                                <div class="item" data-value="announcement">
+                                    <div class="ui blue empty circular label"></div>Anúncio </div>
+                                <div class="item" data-value="cannotfix">
+                                    <div class="ui black empty circular label"></div>Não pode corrigir </div>
+                                <div class="item" data-value="news">
+                                    <div class="ui purple empty circular label"></div>Novidades </div>
+                                <div class="item" data-value="enhancement">
+                                    <div class="ui orange empty circular label"></div>Melhoria </div>
+                                <div class="item" data-value="off-topic">
+                                    <div class="ui yellow empty circular label"></div>Fora do assunto </div>
+                                <div class="item" data-value="interesting">
+                                    <div class="ui pink empty circular label"></div>Interessado </div>
+                                <div class="item" data-value="discussion">
+                                    <div class="ui green empty circular label"></div>Discussão </div>
                             </div>
                         </div>
-                        <!--  -->
-                    </nav>
-                    <nav class="Team Member">
-                        <h3 class="ui header">
-                            Team Menbres:
-                        </h3>
-                        <nav>
-                            <select id="cars" class="ui selection dropdown">
+                    </div>
+                    <!--  -->
+                </nav>
+                <nav class="Team Member">
+                    <h3 class="ui header">
+                        Team Menbres:
+                    </h3>
+                    <nav>
+                        <select id="cars" class="ui selection dropdown">
                             </select>
-                            <br>
-                            <textarea rows="5" cols="50">Membros dos times</textarea>
-                        </nav>
+                        <br>
+                        <textarea rows="5" cols="50">Membros dos times</textarea>
                     </nav>
                 </nav>
-
             </nav>
+
         </nav>
-    </body>
+    </nav>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>

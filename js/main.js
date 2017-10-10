@@ -401,3 +401,19 @@ function setChart() {
     
     document.getElementById('myModal').style.display = "none";
 }
+
+function resetColorPaths() {
+    for (let el of document.getElementsByTagName("path")) {
+        el.style.fill = "#666666";
+    }
+}
+
+for (let obj of document.getElementsByClassName("img_svg")) {
+//    console.log(obj);
+    obj.onclick = function(event) {
+        resetColorPaths();
+        for (let el of event.target.children) {
+            el.style.fill = "#166bb3";
+        }
+    }
+}
