@@ -46,7 +46,7 @@ nav.container {
     /* background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%); */
 }
 
-#chart_void {
+.chart_void {
     width: 30%;
     float: left;
     background-color: #FFFFFF;
@@ -54,7 +54,7 @@ nav.container {
     border-style: dashed;
     border-color: #CFCBCB;
     text-align: center;
-    padding: 9% 0% 9% 0%;
+    padding: 13.5% 0% 13.5% 0%;
 }
 
 nav.ops{
@@ -91,4 +91,8 @@ h2.title {
 
 i.add{
     color: #FFFFFF;
+}
+
+span.openModal {
+    color: #166bb3;
 }

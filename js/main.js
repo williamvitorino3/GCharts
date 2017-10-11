@@ -21,9 +21,9 @@ function getElemento() {
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].id == "chart_void") {
             elements[i].id += "_"+i;
-            return elements[i].id;
+            return elements[i];
         }
-        console.log(elements[i].id);
+        // console.log(elements[i].id);
     }
 }
 
@@ -31,7 +31,7 @@ function setChart() {
     google.charts.setOnLoadCallback(desenhaGrafico);
     
     function desenhaGrafico() {
-
+        
         let graficos = {
             "AnnotationChart": {
                 instancia: google.visualization.AnnotationChart,
@@ -394,8 +394,13 @@ function setChart() {
         }
 
         let chart = graficos[getTypeChart()];
-
-        new chart.instancia(document.getElementById(getElemento()))
+        let el = getElemento();
+        // console.log();
+        el.children[0].style.display = "none";
+        el.attributes[0].ownerElement.parentElement.style.padding = "1% 0% 1% 0%";
+        // el.attributes[0].ownerElement.parentElement.style.borderStyle = "solid";
+        // el.attributes[0].ownerElement.parentElement.style.borderStyle = "groove";
+        new chart.instancia(el)
             .draw(chart.data, chart.options);
     }
     
@@ -409,7 +414,6 @@ function resetColorPaths() {
 }
 
 for (let obj of document.getElementsByClassName("img_svg")) {
-//    console.log(obj);
     obj.onclick = function(event) {
         resetColorPaths();
         for (let el of event.target.children) {
